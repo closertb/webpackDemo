@@ -1,0 +1,111 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.2",
+  "description": "聚合平台h5",
+  "homepage": "http://gitlab.alibaba-inc.com/kpaas-fe/gateway-fe-h5.git",
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.alibaba-inc.com/kpaas-fe/gateway-fe-h5.git"
+  },
+  "author": "唐波",
+  "scripts": {
+    "start": "node ./builder/server.js"
+  },
+  "dependencies": {
+    "@ali/builder-saas-utils": "^1.0.2",
+    "@babel/core": "^7",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-decorators": "^7.7.4",
+    "@babel/plugin-proposal-export-default-from": "^7.7.4",
+    "@babel/plugin-proposal-export-namespace-from": "^7.7.4",
+    "@babel/plugin-proposal-function-bind": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.7.4",
+    "@babel/polyfill": "^7",
+    "@babel/preset-env": "^7",
+    "@babel/preset-react": "^7",
+    "@gem-mine/webpack-chain": "^7.1.0",
+    "autoprefixer": "7",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "8",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "babel-plugin-cook": "^1.0.0",
+    "babel-plugin-import": "^1.13.0",
+    "babel-plugin-react-css-modules": "^5.2.6",
+    "babel-plugin-syntax-dynamic-import": "6",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "chalk": "2",
+    "chokidar": "^3.0.2",
+    "clean-webpack-plugin": "0",
+    "copy-webpack-plugin": "^9.0.1",
+    "crypto-browserify": "^3.12.0",
+    "css-loader": "1",
+    "cssnano": "^4.1.10",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "less": "^3.13.1",
+    "less-loader": "^7.1.0",
+    "mini-css-extract-plugin": "^2.4.4",
+    "mobx": "^6.3.12",
+    "mobx-react": "^7.2.1",
+    "node-fetch": "^2.6.0",
+    "npm-package-arg": "^8.0.0",
+    "nunjucks": "^3.2.0",
+    "open": "^7.0.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.8",
+    "path-to-regexp": "^3.2.0",
+    "portfinder": "^1.0.25",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import": "^12.0.1",
+    "postcss-less": "^3.1.4",
+    "postcss-loader": "3",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-pxtorem": "4",
+    "postcss-safe-area-inset": "1",
+    "postcss-scss": "^2.1.1",
+    "postcss-url": "^8.0.0",
+    "process": "^0.11.10",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "querystring": "^0.2.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "registry-url": "^5.1.0",
+    "stream-browserify": "^3.0.0",
+    "style-loader": "0",
+    "thread-loader": "^2.1.3",
+    "ts-loader": "^6.0.4",
+    "tslib": "1",
+    "typescript": "^3.7.3",
+    "url-loader": "0.5",
+    "urllib": "^2.34.2",
+    "webpack": "^5.61.0",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-middleware": "^5.2.1",
+    "webpack-dev-server": "^4.4.0",
+    "webpack-hot-middleware": "2",
+    "webpack-system-register": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/classnames": "2",
+    "@types/node": "^16.7.13",
+    "acorn": "^8.7.0"
+  },
+  "engines": {
+    "install-node": "8"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npm.alibaba-inc.com"
+  },
+  "commitlint": {
+    "extends": [
+      "@alipay/commitlint-config-kobe"
+    ]
+  },
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.less": "stylelint --syntax less"
+  }
+}
