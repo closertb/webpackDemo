@@ -1,18 +1,12 @@
 {
   "name": "webpack-demo",
   "version": "1.0.2",
-  "description": "聚合平台h5",
-  "homepage": "http://gitlab.alibaba-inc.com/kpaas-fe/gateway-fe-h5.git",
-  "repository": {
-    "type": "git",
-    "url": "http://gitlab.alibaba-inc.com/kpaas-fe/gateway-fe-h5.git"
-  },
-  "author": "唐波",
+  "description": "test dome",
+  "author": "doddle",
   "scripts": {
     "start": "node ./builder/server.js"
   },
   "dependencies": {
-    "@ali/builder-saas-utils": "^1.0.2",
     "@babel/core": "^7",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/plugin-proposal-decorators": "^7.7.4",
@@ -41,7 +35,7 @@
     "clean-webpack-plugin": "0",
     "copy-webpack-plugin": "^9.0.1",
     "crypto-browserify": "^3.12.0",
-    "css-loader": "1",
+    "css-loader": "^6.5.1",
     "cssnano": "^4.1.10",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",

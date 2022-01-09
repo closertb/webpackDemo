@@ -20,9 +20,6 @@ module.exports = {
   },
   webpack: {
     // 主题配置
-    themes: {
-      '@hd': '2px',
-    },
     usePublic: true,
     devServer: {
       port: 8905,
@@ -48,6 +45,16 @@ module.exports = {
     analyze: false,
     // extraPostCSSPlugins: [plugin],
     configApi: (config) => {
+      const loader = config.module.rule('less').use('less-loader');
+
+      const options = loader.get('options');
+
+      loader.options({
+        ...options,
+        lessOptions: Object.assign(options?.lessOptions || {}, { javascriptEnabled: true })
+      });
+      console.log('less: ', options, loader.get('options'));
+      
       config.externals({
         react: 'React',
         'react-dom': 'ReactDOM',

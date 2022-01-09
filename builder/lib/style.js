@@ -83,13 +83,13 @@ function default_1({ config, webpackConfig, isDev, disableCompress, browserslist
         isDev,
         lang: 'less',
         test: /\.(less)(\?.*)?$/,
-        loader: require.resolve('less-loader'),
+        loader: 'less-loader',
         options: {
             lessOptions: themes ? {
                 modifyVars: themes,
                 javascriptEnabled: true,
                 strictMath: false,
-            } : {},
+            } : { strictMath: false },
         },
         browserslist,
     });
