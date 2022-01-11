@@ -28,36 +28,13 @@ module.exports = {
       query: {
         a: 1,
       },
-      proxy: {
-        '/api': {
-          target: 'https://gldpartner.keruyun.com',
-          changeOrigin: true,
-          secure: true,
-          // logLevel: 'debug',
-          bypass: (req) => {
-            console.log(req.url);
-            return null;
-          },
-        },
-      },
     },
     // 是否开启chunk分析
     analyze: false,
-    // extraPostCSSPlugins: [plugin],
     configApi: (config) => {
-      const loader = config.module.rule('less').use('less-loader');
-
-      const options = loader.get('options');
-
-      loader.options({
-        ...options,
-        lessOptions: Object.assign(options?.lessOptions || {}, { javascriptEnabled: true })
-      });
-      console.log('less: ', options, loader.get('options'));
-      
       config.externals({
-        react: 'React',
-        'react-dom': 'ReactDOM',
+        // react: 'React',
+        // 'react-dom': 'ReactDOM',
       });
       config.output.libraryTarget('system');
       config.devtool('cheap-source-map');
